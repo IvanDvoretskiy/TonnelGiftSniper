@@ -42,7 +42,7 @@ A gift is purchased when ALL conditions are met:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/IvanDvoretskiy/tonnel-gift-trader.git
+git clone https://github.com/IvanDvoretskiy/TonnelGiftSniper.git
 cd tonnel-gift-trader
 ```
 
