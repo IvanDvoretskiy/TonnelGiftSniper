@@ -3,8 +3,8 @@ import time
 import json
 from typing import Set, Dict
 from colorama import Fore, Style
-from .constants import ANALYSIS_PARAMS, LOG_CONFIG, AUTH_DATA
-from .api_client import APIClient
+from constants import ANALYSIS_PARAMS, LOG_CONFIG, AUTH_DATA
+from api_client import APIClient
 
 class GiftAnalyzer:
     def __init__(self):
