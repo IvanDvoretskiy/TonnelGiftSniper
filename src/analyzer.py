@@ -64,7 +64,7 @@ class GiftAnalyzer:
             if (profit >= ANALYSIS_PARAMS['WANTED_PROFIT_PERCENT'] and 
                 current_price <= ANALYSIS_PARAMS['PRICE_LIMIT'] and
                 floor_profit >= ANALYSIS_PARAMS['WANTED_FLOOR_PROFIT']):
-                return self._attempt_purchase(gift_id, current_price)
+                return self._attempt_purchase(gift_id, gift['price'])
                 
         except Exception as e:
             logging.error(f"{Fore.RED}Error processing gift {gift_id}: {e}")
@@ -102,7 +102,10 @@ class GiftAnalyzer:
             except Exception as e:
                 logging.error(f"{Fore.RED}Main loop error: {e}")
             time.sleep(1)
+<<<<<<< HEAD
             
             
 if __name__ == '__main__':
     GiftAnalyzer().run()
+=======
+>>>>>>> 2166cb4a4a2c286116b1f9fca752c85abb5d6da6
