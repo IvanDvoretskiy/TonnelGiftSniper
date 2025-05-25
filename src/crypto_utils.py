@@ -3,7 +3,7 @@ import os
 import base64
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
-from .constants import SECRET_KEY
+from constants import SECRET_KEY
 
 def EVP_BytesToKey(password: str, salt: bytes, key_size: int = 32, iv_size: int = 16, iterations: int = 1) -> tuple:
     """Generate key and IV using OpenSSL's EVP_BytesToKey algorithm."""

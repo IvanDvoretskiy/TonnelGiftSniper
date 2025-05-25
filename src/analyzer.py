@@ -3,8 +3,8 @@ import time
 import json
 from typing import Set, Dict
 from colorama import Fore, Style
-from .constants import ANALYSIS_PARAMS, LOG_CONFIG, AUTH_DATA
-from .api_client import APIClient
+from constants import ANALYSIS_PARAMS, LOG_CONFIG, AUTH_DATA
+from api_client import APIClient
 
 class GiftAnalyzer:
     def __init__(self):
@@ -95,9 +95,14 @@ class GiftAnalyzer:
         while True:
             try:
                 gifts = self.api.get_sale_history()
+                print(gifts)
                 for gift in gifts:
                     self.analyze_gift(gift)
                     time.sleep(1)
             except Exception as e:
                 logging.error(f"{Fore.RED}Main loop error: {e}")
             time.sleep(1)
+            
+            
+if __name__ == '__main__':
+    GiftAnalyzer().run()

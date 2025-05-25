@@ -3,8 +3,8 @@ import logging
 import time
 from typing import List, Dict, Optional
 import cloudscraper
-from .constants import API_CONFIG, PROXY, AUTH_DATA
-from .crypto_utils import generate_wtf
+from constants import API_CONFIG, PROXY, AUTH_DATA
+from crypto_utils import generate_wtf
 
 class APIClient:
     def __init__(self):
@@ -40,7 +40,7 @@ class APIClient:
             logging.error(f"API request failed: {e}")
             return None
 
-    def get_sale_history(self, page: int = 1, limit: int = 50, **filters) -> List[Dict]:
+    def get_sale_history(self, page: int = 1, limit: int = 30, **filters) -> List[Dict]:
         """Get gift sale history with optional filters."""
         filter_data = {
             "price": {"$exists": True},
