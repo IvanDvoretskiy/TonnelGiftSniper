@@ -102,10 +102,7 @@ class GiftAnalyzer:
             except Exception as e:
                 logging.error(f"{Fore.RED}Main loop error: {e}")
             time.sleep(1)
-<<<<<<< HEAD
-            
             
 if __name__ == '__main__':
     GiftAnalyzer().run()
-=======
->>>>>>> 2166cb4a4a2c286116b1f9fca752c85abb5d6da6
+
